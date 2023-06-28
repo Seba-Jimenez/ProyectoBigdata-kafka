@@ -6,5 +6,8 @@ const producer = new Kafka.Producer(readConfigFile("creds.txt"));
 producer.connect();
 producer.on("ready", async () => {
     console.log("ready")
-    producer.produce("my-topic", -1, Buffer.from("value"), Buffer.from("key"));
+    while(true){
+        producer.produce("my-topic", -1, Buffer.from("value"), Buffer.from("key"));
+    }
+   
 });

@@ -1,6 +1,6 @@
 const Kafka = require("node-rdkafka");
 const { readConfigFile } = require("./helper");
-const config = readConfigFile("creds.txt");
+const config = readConfigFile("client.properties");
 config["group.id"] = "node-group";
 var io = require("socket.io-client");
 

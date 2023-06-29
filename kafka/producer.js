@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const Kafka = require("node-rdkafka");
 const { readConfigFile } = require('./helper');
-const producer = new Kafka.Producer(readConfigFile("creds.txt"));
+const producer = new Kafka.Producer(readConfigFile("client.properties"));
 producer.connect();
 producer.on("ready", async () => {
     console.log("ready")

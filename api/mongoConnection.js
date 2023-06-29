@@ -1,4 +1,4 @@
-const dbString = "mongodb+srv://bigdata:chucha12npm nstall@bigdata.g7ngyy9.mongodb.net/?retryWrites=true&w=majority"
+const dbString = "mongodb+srv://bigdata:chucha12@bidgdata.9t1zvjt.mongodb.net/?retryWrites=true&w=majority"
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const client = new MongoClient(dbString, {

@@ -1,0 +1,39 @@
+body {
+    background-image: url('https://appmaster.io/api/_files/pSEQqtqLyTiqCP3WKvyW9c/download/');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.titulo {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 50px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+  }
+
+.row{
+    padding-top: 40px;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  font-family: monospace;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
+}

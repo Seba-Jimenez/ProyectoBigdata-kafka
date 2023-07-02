@@ -16,10 +16,11 @@ consumer.on("ready", () => {
     consumer.consume();
 
 }).on("data", (message) => {
+
     const data = {
         key: message.key.toString(),
         value: message.value.toString(),
     }
-    console.log("Consumed message", JSON.stringify(data));
+    console.log("Consumed message", message.key);
     socket.emit("consumerDataEvent",JSON.stringify(data));
 });

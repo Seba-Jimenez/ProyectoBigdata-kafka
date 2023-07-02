@@ -1,17 +1,20 @@
-<script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-<script>
-  var socket = io("http://localhost:3000");
-
-  // Escucha eventos de actualización de datos de la API 1
-  //socket.on('api1-update', function(data) {
-  //  var api1DataElement = document.getElementById('api1-data');
-  //  api1DataElement.innerText = JSON.stringify(data);
-  //});
-
-</script>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script>
+    var socket = io("http://localhost:3000");
+    
+    socket.on("connect", function() {
+      console.log("Socket connected");
+    });
+
+    //Escucha eventos de actualizacion de datos de la API 1
+    socket.on('api1-update', function(data) {
+     var api1DataElement = document.getElementById('apidata');
+    api1DataElement.innerText = JSON.stringify(data);
+    });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Consumo de APIs</title>
@@ -27,7 +30,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">API 1</h5>
-            <p class="card-text" id="api1-data">Cargando datos...</p>
+            <p id="apidata"></p>
           </div>
         </div>
       </div>
